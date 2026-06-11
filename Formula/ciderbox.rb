@@ -11,7 +11,7 @@ class Ciderbox < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/mentholmike/ciderbox/releases/download/v1.0.0/ciderbox_1.0.0_darwin_amd64.tar.gz"
-      sha256 "9faf82f69313a92f8e5cfd43be0287446494067f45ff1de769b8449ed588ccaa"
+      sha256 "9f38e9d9d08899eb289a0dfbc7d521d0ca8d4be9d809ba2989e112da5c110e1b"
 
       define_method(:install) do
         bin.install "ciderbox"
@@ -19,7 +19,7 @@ class Ciderbox < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/mentholmike/ciderbox/releases/download/v1.0.0/ciderbox_1.0.0_darwin_arm64.tar.gz"
-      sha256 "2b756bfad426560235e3ea257a9860ed3e44eee83465178f4cb13995e8984bbe"
+      sha256 "b3a63bfe7488f8bef733203cfcc2f67a932ae63ccac755cb4035a7f44eafc666"
 
       define_method(:install) do
         bin.install "ciderbox"
@@ -30,14 +30,14 @@ class Ciderbox < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/mentholmike/ciderbox/releases/download/v1.0.0/ciderbox_1.0.0_linux_amd64.tar.gz"
-      sha256 "a2f1901d2b9ab0ec78cfa2d5f09af9c034bcdef2fc4b9add566766cae74486af"
+      sha256 "62fdc2e01031519ec023b76e17345954b3202170840c0b38e5fafe8a3860eaec"
       define_method(:install) do
         bin.install "ciderbox"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/mentholmike/ciderbox/releases/download/v1.0.0/ciderbox_1.0.0_linux_arm64.tar.gz"
-      sha256 "af3c9463bbf6509eda44958235f5a48903418a0780188accbcd6f07c849efacc"
+      sha256 "83ba3c12063ea4adb7c19d4383a07f7dd0b2c09fe34ce91c4bb1351bf3c14637"
       define_method(:install) do
         bin.install "ciderbox"
       end
