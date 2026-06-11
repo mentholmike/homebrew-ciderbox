@@ -10,16 +10,16 @@ class Ciderbox < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mentholmike/ciderbox/releases/download/v1.0.0/ciderbox_1.0.0_darwin_amd64.tar.gz"
-      sha256 "9f38e9d9d08899eb289a0dfbc7d521d0ca8d4be9d809ba2989e112da5c110e1b"
+      url "https://github.com/mentholmike/ciderbox/releases/download/v1.0.0/ciderbox_darwin_amd64_v1.0.0.tar.gz"
+      sha256 "ed578553f87eeb68b9e574b025b74ed4577e1ec0b085ca5c095877a197116b91"
 
       define_method(:install) do
         bin.install "ciderbox"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mentholmike/ciderbox/releases/download/v1.0.0/ciderbox_1.0.0_darwin_arm64.tar.gz"
-      sha256 "b3a63bfe7488f8bef733203cfcc2f67a932ae63ccac755cb4035a7f44eafc666"
+      url "https://github.com/mentholmike/ciderbox/releases/download/v1.0.0/ciderbox_darwin_arm64_v1.0.0.tar.gz"
+      sha256 "9c74fdab7509a669318962c201236b1ca74934a38613602f429e0ce7f6980f00"
 
       define_method(:install) do
         bin.install "ciderbox"
@@ -29,15 +29,15 @@ class Ciderbox < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mentholmike/ciderbox/releases/download/v1.0.0/ciderbox_1.0.0_linux_amd64.tar.gz"
-      sha256 "62fdc2e01031519ec023b76e17345954b3202170840c0b38e5fafe8a3860eaec"
+      url "https://github.com/mentholmike/ciderbox/releases/download/v1.0.0/ciderbox_linux_amd64_v1.0.0.tar.gz"
+      sha256 "985d4531f1156b60f78c39f8975497617e15179d490032a3f67b171b04ce88db"
       define_method(:install) do
         bin.install "ciderbox"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mentholmike/ciderbox/releases/download/v1.0.0/ciderbox_1.0.0_linux_arm64.tar.gz"
-      sha256 "83ba3c12063ea4adb7c19d4383a07f7dd0b2c09fe34ce91c4bb1351bf3c14637"
+      url "https://github.com/mentholmike/ciderbox/releases/download/v1.0.0/ciderbox_linux_arm64_v1.0.0.tar.gz"
+      sha256 "e0a8e252140a62110232d5159909e41fc8137af92ed92d0675cb282becbb9e4a"
       define_method(:install) do
         bin.install "ciderbox"
       end
