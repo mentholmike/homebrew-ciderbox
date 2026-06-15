@@ -5,21 +5,21 @@
 class Ciderbox < Formula
   desc "Apple-native throwaway dev environments using container CLI"
   homepage "https://ciderbox.dev"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mentholmike/ciderbox/releases/download/v1.0.0/ciderbox_darwin_amd64_v1.0.0.tar.gz"
-      sha256 "ed578553f87eeb68b9e574b025b74ed4577e1ec0b085ca5c095877a197116b91"
+      url "https://github.com/mentholmike/ciderbox/releases/download/v1.1.0/ciderbox_1.1.0_darwin_amd64.tar.gz"
+      sha256 "6102a875a3f9ebfb874a5a24abe1d302fed2539215b4a31f7822c21aad6c6d9f"
 
       define_method(:install) do
         bin.install "ciderbox"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mentholmike/ciderbox/releases/download/v1.0.0/ciderbox_darwin_arm64_v1.0.0.tar.gz"
-      sha256 "9c74fdab7509a669318962c201236b1ca74934a38613602f429e0ce7f6980f00"
+      url "https://github.com/mentholmike/ciderbox/releases/download/v1.1.0/ciderbox_1.1.0_darwin_arm64.tar.gz"
+      sha256 "6fe746411501f8f2db12fd2e70aa1926ab6eb72857b3654370099387929e49d8"
 
       define_method(:install) do
         bin.install "ciderbox"
@@ -29,15 +29,15 @@ class Ciderbox < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mentholmike/ciderbox/releases/download/v1.0.0/ciderbox_linux_amd64_v1.0.0.tar.gz"
-      sha256 "985d4531f1156b60f78c39f8975497617e15179d490032a3f67b171b04ce88db"
+      url "https://github.com/mentholmike/ciderbox/releases/download/v1.1.0/ciderbox_1.1.0_linux_amd64.tar.gz"
+      sha256 "c3408e96f25b88d8b6bec73f1a60776a4a7b067f9b21583f61e2a13b1c39904b"
       define_method(:install) do
         bin.install "ciderbox"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mentholmike/ciderbox/releases/download/v1.0.0/ciderbox_linux_arm64_v1.0.0.tar.gz"
-      sha256 "e0a8e252140a62110232d5159909e41fc8137af92ed92d0675cb282becbb9e4a"
+      url "https://github.com/mentholmike/ciderbox/releases/download/v1.1.0/ciderbox_1.1.0_linux_arm64.tar.gz"
+      sha256 "111d54ff720e72db894da935712e0330479fd5dbe21ef979c00697994712e5c4"
       define_method(:install) do
         bin.install "ciderbox"
       end
