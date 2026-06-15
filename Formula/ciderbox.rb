@@ -5,21 +5,21 @@
 class Ciderbox < Formula
   desc "Apple-native throwaway dev environments using container CLI"
   homepage "https://ciderbox.dev"
-  version "1.2.0"
+  version "1.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mentholmike/ciderbox/releases/download/v1.2.0/ciderbox_1.2.0_darwin_amd64.tar.gz"
-      sha256 "79f8ffe18ebab76e55069f5ca70fcf4482b3fde43192cd3782c680987fbee72e"
+      url "https://github.com/mentholmike/ciderbox/releases/download/v1.2.1/ciderbox_1.2.1_darwin_amd64.tar.gz"
+      sha256 "PLACEHOLDER_INTEL_SHA256"
 
       define_method(:install) do
         bin.install "ciderbox"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mentholmike/ciderbox/releases/download/v1.2.0/ciderbox_1.2.0_darwin_arm64.tar.gz"
-      sha256 "0d17f2e43fb027d32945c589ee52e7a9a6c4eb13fa7eb89a3e2c0627827c2290"
+      url "https://github.com/mentholmike/ciderbox/releases/download/v1.2.1/ciderbox_1.2.1_darwin_arm64.tar.gz"
+      sha256 "PLACEHOLDER_ARM_SHA256"
 
       define_method(:install) do
         bin.install "ciderbox"
@@ -29,15 +29,15 @@ class Ciderbox < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mentholmike/ciderbox/releases/download/v1.2.0/ciderbox_1.2.0_linux_amd64.tar.gz"
-      sha256 "9fb843ca476388d926c04a0ee13abf21989c03d7fca763bb3106e5343e44ce0b"
+      url "https://github.com/mentholmike/ciderbox/releases/download/v1.2.1/ciderbox_1.2.1_linux_amd64.tar.gz"
+      sha256 "PLACEHOLDER_LINUX_AMD64_SHA256"
       define_method(:install) do
         bin.install "ciderbox"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mentholmike/ciderbox/releases/download/v1.2.0/ciderbox_1.2.0_linux_arm64.tar.gz"
-      sha256 "eccb32f47ca1acc710615b780818bd40100301a5de745dab8807a173812b6b37"
+      url "https://github.com/mentholmike/ciderbox/releases/download/v1.2.1/ciderbox_1.2.1_linux_arm64.tar.gz"
+      sha256 "PLACEHOLDER_LINUX_ARM64_SHA256"
       define_method(:install) do
         bin.install "ciderbox"
       end
